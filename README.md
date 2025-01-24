@@ -1,27 +1,57 @@
-# AtividadeFixacao
+# Pixel Gallery - Galeria de Pixel Art
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.29.
+A **Pixel Gallery** é um projeto de galeria de pixel art desenvolvido com o objetivo de praticar e fixar meus conhecimentos em **Angular**. Este projeto foca na manipulação de dados no front-end e na criação de uma interface interativa e responsiva.
 
-## Development server
+## Objetivo do Projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+O principal objetivo do projeto foi aplicar os conceitos aprendidos em Angular, praticando:
+- Criação de uma aplicação funcional com **Reactive Forms**.
+- Uso de bibliotecas modernas para melhorar a experiência do usuário.
+- Integração entre o front-end e o back-end para gerenciar o login e o registro de usuários, permitindo que eles se registrem no site.
 
-## Code scaffolding
+## Funcionalidades Principais
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Login e registro de usuários.  
+  **Observação**: Não é possível adicionar novas artes à galeria. Todas as postagens disponíveis foram criadas manualmente durante o desenvolvimento, pois o objetivo deste projeto foi realizar apenas o cadastro e login de usuário.
+- Visualização e organização de artes em pixel art.
+- Design responsivo e visual atrativo.
 
-## Build
+## Tecnologias Utilizadas
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Front-End
+- **Angular**: Framework principal para desenvolvimento do front-end.
+- **Reactive Forms**: Utilizado para criação de formulários dinâmicos e validados.
+- **PrimeNG**: Biblioteca de componentes para melhorar a experiência visual.
+- **Bootstrap**: Utilizado para criar um layout responsivo e moderno.
 
-## Running unit tests
+### Back-End
+- O back-end deste projeto foi desenvolvido previamente utilizando **Java** e não foi incluído no repositório. 
+- Apesar de não ter criado o back-end, fui responsável por **toda a implementação do front-end** e pela **integração** com o back-end para gerenciar o login e o registro de usuários.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Como Executar o Projeto
 
-## Running end-to-end tests
+1. Navegue até a pasta `pixel-gallery`:
+   ```bash
+   cd pixel-gallery
+   
+2. Instale as dependências:
+   ```bash
+   npm install
+   
+3. Execute o projeto:
+   ```bash
+   ng serve
+   
+Acesse a aplicação no navegador em: http://localhost:4200.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Aprendizados e Experiência
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Durante o desenvolvimento deste projeto, pude:
+
+- **Praticar e fixar** os conceitos de **Angular**.
+- **Aprender** a trabalhar com **Reactive Forms** para criar formulários dinâmicos e validados.
+- **Implementar** a integração de login e registro de usuários, permitindo que novos usuários se registrem no site.
+- Observação: Não é possível adicionar novas fotos através do site. As postagens disponíveis foram criadas manualmente durante o desenvolvimento.
+- **Utilizar** bibliotecas modernas como **PrimeNG** e **Bootstrap** para melhorar o design e a usabilidade.
+  
