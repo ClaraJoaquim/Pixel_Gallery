@@ -1,0 +1,6 @@
+<app-header *ngIf="!isPage"></app-header>
+<main class="container">
+    <router-outlet></router-outlet>
+    <ng2-toasty></ng2-toasty>
+</main>
+<app-footer *ngIf="!isPage"></app-footer>

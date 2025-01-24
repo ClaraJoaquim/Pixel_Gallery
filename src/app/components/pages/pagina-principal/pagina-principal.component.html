@@ -1,0 +1,39 @@
+<div class="container-pagina-principal">
+    <form>
+      <div class="form-row align-items-center">
+        <div class="form-group col-auto">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <i class="bi bi-search-heart"></i>
+              </div>
+            </div>
+            <input 
+              type="text" 
+              placeholder="Pesquise por Titulo ou Categoria!" 
+              (input)="pesquisar($event)" 
+            />
+          </div>
+        </div>
+      </div>
+    </form>
+  
+    <h1 class="text-center mb-4">Principais Postagens</h1>
+  
+    <div class="container-postagens">
+      <div class="postagens row row-cols-2">
+        <div *ngFor="let post of postagensFiltradas" class="col mb-5">
+          <h3>{{ post.titulo }}</h3>
+          <div class="postagem-content">
+            <div class="postagem-img mb-3">
+              <img src="{{post.img}}" alt="Imagem de {{ post.titulo }}">
+            </div>
+            <p>Titulo: {{ post.titulo }}</p>
+            <p>Descrição: {{ post.descricao }}</p>
+            <p>Artista: {{ post.artista }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

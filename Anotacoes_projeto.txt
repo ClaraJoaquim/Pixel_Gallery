@@ -1,0 +1,40 @@
+Anotações do Projeto de Fixação de Front End
+
+SERVICE:
+
+    public createUsuario(usuario: Usuario): Observable<void> {
+        return this.http.post<void>(`${this.baseApiUrl}/cadastrar`, usuario);
+    }
+    . O método é publico pra que seja possível outros componentes acessarem ele fora da classe;
+    . Criação de um usuario passando como parametro um usuário que é do tipo usuário, ou seja, vai ser passado um argumento do tipo usuário (lembrando que usuário é uma interface);
+    . É necessário o parametro ser do tipo usuário para que na hora de cadastrar eu passe o "usuárioform" que é o formulário que eu armazenei meus dados;
+    . Tem um Observable do tipo void, O Observable é uma construção usada no Angular (com RxJS) para trabalhar com operações assíncronas, como requisições HTTP, ou seja, permite que o meu código continue rodando enquanto aguarda a resposta da operação;
+    . usuario: O objeto passado como segundo argumento no método post, que será enviado no corpo da requisição POST.
+
+
+    public login(usuarioLogin: string): Observable<UsuarioDTO> {
+        return this.http.get<UsuarioDTO>(`${this.baseApiUrl}/login?login=${usuarioLogin}`)
+        .pipe(
+            tap((usuarioDTO) => {
+            localStorage.setItem('usuario', JSON.stringify(usuarioDTO));
+            })
+        );
+    }
+    . pipe(): Permite aplicar operadores RxJS para modificar ou manipular os dados que o Observable emite. Neste caso, está sendo usado para executar uma ação quando a resposta chega.
+    . tap: Operador RxJS que executa um efeito colateral sem modificar os dados emitidos pelo Observable.
+    . localStorage.setItem: Salva no armazenamento local do navegador.
+    . 'usuario': Chave usada para armazenar os dados.
+    . JSON.stringify(usuarioDTO): Converte o objeto usuarioDTO para uma string JSON antes de armazená-lo.
+
+
+    public alterarUsuario(id: number, dados: any): Observable<any> {
+        return this.http.put<any>(`${this.baseApiUrl}/alterar-login/${id}`, dados, {
+            headers: { 'Content-Type': 'application/json' }
+        });
+    }
+    . 
+
+
+
+
+obs: o ngOnInit é chamado antes da renderização inicial do template do componente.

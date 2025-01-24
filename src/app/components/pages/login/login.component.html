@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="container-content">
+
+        <form [formGroup]="formLogin" (ngSubmit)="login()">
+            <h1>Faça Login</h1>
+
+            <div class="form-row align-items-center">
+                <div class="form-group col-auto ">
+                    <label for="email">E-mail</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="bi bi-envelope-heart"></i>
+                            </div>
+                        </div>
+                        <input type="email" class="form-control" placeholder="exemplo@email.com" formControlName="email"
+                            pTooltip="Informe seu Email" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row align-items-center">
+                <div class="form-group col-auto mb-1">
+                    <label for="senha">Senha</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="bi bi-key"></i>
+                            </div>
+                        </div>
+                        <input type="password" class="form-control" placeholder="Digite sua Senha"
+                            formControlName="senha" pTooltip="Informe sua senha" required>
+                    </div>
+                </div>
+                <p id="possui-login" class="mb-4">Ainda não possui uma conta? <a routerLink="/cadastro">Cadastre-se
+                        Agora</a></p>
+            </div>
+
+            <button type="submit" class="btn btn-primary" [disabled]="formLogin.invalid">Entrar</button>
+            <a routerLink="/" id="btn-voltar">
+                <i class="bi bi-arrow-left-short"></i> Voltar Para Página Inicial
+            </a>
+        </form>
+        <img src="/assets/img/pixel-gallery2.png" alt="Pixel Gallery">
+    </div>
+</div>

@@ -1,0 +1,10 @@
+Cores:
+. Links (do header): #422b2b;
+. Titulos / Paragráfos : #120c0c;
+. Background do header e do footer: #F1DDCF;
+. Background da box do cadastro e do login: #fffbf8;
+. Botão: #6a4646
+
+
+Fonte: 
+. font-family: "Chakra Petch", sans-serif;

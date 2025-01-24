@@ -1,0 +1,57 @@
+.container-perfil {
+    margin-top: 6em;
+}
+
+.conatiner-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.img-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group {
+    width: 50%;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-bottom: 0.4em;
+}
+
+input[type="text"]:focus, 
+input[type="tel"]:focus, 
+input[type="email"]:focus, 
+input[type="password"]:focus {
+    border: 1px solid #120c0c;
+    box-shadow: none !important;
+}
+
+.content {
+    margin: 0 13.2em;
+}
+
+.links-perfil {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .content {
+        margin: 0 8em;
+    }
+
+    .card-body {
+        padding: 10px;
+    }
+
+    .col-4 {
+        flex: 40%;
+        max-width: 40%;
+    }
+}

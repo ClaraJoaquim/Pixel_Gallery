@@ -1,0 +1,32 @@
+.container-sobre {
+    margin: 6em 8em;
+}
+
+.descricao {
+    margin-top: 1em;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.img-sobre {
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width: 768px) {
+    .container-sobre {
+        margin: 5em 2em;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .descricao {
+        font-size: 20px;
+    }
+
+    .img-sobre {
+        height: 170px;
+    }
+}

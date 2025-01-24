@@ -1,0 +1,116 @@
+<div class="container-cadastro">
+    <div class="container-content-cadastro">
+
+        <div class="container-img">
+            <img src="/assets/img/pixel-gallery.png" alt="Pixel Gallery">
+        </div>
+
+        <form [formGroup]="cadastroForm" (ngSubmit)="cadastrar()">
+            <h1>Registre-se!</h1>
+
+            <div class="form-row align-items-center">
+                <div class="form-group col-auto ">
+                    <label for="nome">* Nome</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="bi bi-person-heart"></i>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" formControlName="nome" placeholder="Digite seu Nome"
+                            pTooltip="Digite seu Nome" required>
+                    </div>
+                    <div *ngIf="cadastrou || nome.touched" class="validation-error">
+                        <p *ngIf="nome.errors && nome.errors.required" class="m-0 pl-1">O nome é obrigatório.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row align-items-center">
+                <div class="form-group col-auto ">
+                    <label for="telefone">* Telefone</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="bi bi-telephone"></i>
+                            </div>
+                        </div>
+                        <input type="tel" class="form-control" placeholder="(xx) xxxxx-xxxx" formControlName="telefone"
+                            pTooltip="Digite seu Telefone" required>
+                    </div>
+                    <div *ngIf="cadastrou || telefone.touched" class="validation-error">
+                        <p *ngIf="telefone.errors && telefone.errors.required" class="m-0 pl-1">O telefone é
+                            obrigatório.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row align-items-center">
+                <div class="form-group col-auto">
+                    <label for="genero">* Gênero</label>
+                    <div class="input-group mb-2 ">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="bi bi-heart-half"></i>
+                            </div>
+                        </div>
+                        <select class="custom-select" formControlName="genero" pTooltip="Selecione o Gênero">
+                            <option selected disabled>Selecione o Gênero</option>
+                            <option value="fem">Feminino</option>
+                            <option value="masc">Masculino</option>
+                        </select>
+                    </div>
+                    <div *ngIf="cadastrou" class="validation-error">
+                        <p *ngIf="genero.errors && genero.errors.required" class="m-0 pl-1">O gênero é obrigatório.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row align-items-center">
+                <div class="form-group col-auto ">
+                    <label for="email">* E-mail</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="bi bi-envelope-heart"></i>
+                            </div>
+                        </div>
+                        <input type="email" class="form-control" placeholder="exemplo@email.com" formControlName="email"
+                            pTooltip="Digite seu Email" required>
+                    </div>
+                    <div *ngIf="cadastrou || email.touched" class="validation-error">
+                        <p *ngIf="email.errors && email.errors.required" class="m-0 pl-1">O e-mail é obrigatório.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row align-items-center">
+                <div class="form-group col-auto mb-1">
+                    <label for="senha">* Senha</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="bi bi-key"></i>
+                            </div>
+                        </div>
+                        <input type="password" class="form-control" formControlName="senha" placeholder="Digite a Senha"
+                            pTooltip="Digite a Senha" required>
+                    </div>
+                    <div *ngIf="cadastrou || senha.touched" class="validation-error">
+                        <p *ngIf="senha.errors && senha.errors.required" class="mb-2 pl-1">A senha é obrigatória.</p>
+                    </div>
+                </div>
+                <p id="possui-login" class="mb-4">Já possui uma conta? <a routerLink="/login">Entre Agora</a></p>
+            </div>
+
+            <button type="submit" class="btn btn-primary" [disabled]="cadastroForm.invalid">Cadastrar</button>
+
+            <div class="container-btn">
+                <a routerLink="/" id="btn-voltar">
+                    <i class="bi bi-arrow-left-short"></i> Voltar Para Página Inicial
+                </a>
+            </div>
+
+        </form>
+    </div>
+</div>

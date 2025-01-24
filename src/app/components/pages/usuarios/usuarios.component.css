@@ -1,0 +1,15 @@
+.container-usuarios {
+    margin: 6em 8em;
+}
+
+p-table th, p-table td {
+    min-width: 100px;
+    word-wrap: break-word;
+}
+
+@media (max-width: 768px){
+    .container-usuarios {
+        margin: 3em 0;
+    }
+}
+
